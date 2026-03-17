@@ -1,4 +1,3 @@
-cat << 'EOF' > task_runner.py
 import argparse
 import json
 import os
@@ -11,7 +10,7 @@ def main():
     parser.add_argument("--once", action="store_true", help="Run single registration")
     args = parser.parse_args()
 
-    # 确保 codex 目录存在 (对应 workflow 中的 artifacts 路径)
+    # 确保 codex 目录存在
     os.makedirs("codex", exist_ok=True)
 
     # 模拟生成一个 json token 文件
@@ -31,4 +30,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-EOF
